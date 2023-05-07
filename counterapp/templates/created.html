@@ -1,16 +1,12 @@
 <style>
-
-
-
-
-
     .btn{
         color:white;
         background-color:green;
         padding:2px 4px; 
         border-radius:10%;
         width:20vw;
-        margin-top:6px
+        margin-top:6px;
+        font-weight:bold;
     }
     form{
         color:green;
@@ -20,12 +16,31 @@
         justify-content: center;
         align-items:center;
     }
-</style>
-<h1> create your form </h1>
-<form method="POST">
-{% csrf_token %}
+    div{
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+      
+    }
+i{
+    font-weight:bold;
+    color:green;
+}
+</style>  
+ <div >  
 
-{{form}}
-<input class="btn" type="submit" value="submit"/>
+    <h1> <u> WORD COUNTER APP</u></h1>
+    <p> This app helps to count the number of  repeated words in  sentences </p>
+    <p> the word count will be displayed in a new page after submission </p>
+    
+    <form method="POST">
+        {% csrf_token %}
+        
+        {{form}}
+        <input class="btn" type="submit" value="submit"/>
+        
+    </form>
+    <i> prepared by ATP :+2347080824483 </i>
+</div>
 
-</form>
