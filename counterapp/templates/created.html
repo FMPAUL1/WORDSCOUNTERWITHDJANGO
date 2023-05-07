@@ -1,0 +1,31 @@
+<style>
+
+
+
+
+
+    .btn{
+        color:white;
+        background-color:green;
+        padding:2px 4px; 
+        border-radius:10%;
+        width:20vw;
+        margin-top:6px
+    }
+    form{
+        color:green;
+        display:flex;
+        flex-direction:column;
+        width:50%;
+        justify-content: center;
+        align-items:center;
+    }
+</style>
+<h1> create your form </h1>
+<form method="POST">
+{% csrf_token %}
+
+{{form}}
+<input class="btn" type="submit" value="submit"/>
+
+</form>

@@ -1,0 +1,33 @@
+<style >
+table{
+    width:100%;
+        border-collapse:collapse; 
+}
+   table td,table td{
+        border:1px solid green;
+        padding:8px;
+    }
+
+    table th{
+        padding-top:12px;
+        padding-bottom :12px;
+        text-align:left;
+        background-color:green;
+        color:white;
+    }
+
+</style>
+<h1> THE WORDS YOU INPUTTED ARE HERE </h1>
+<table >
+    <tr>
+        <th>Word</th>
+        <th>count</th>
+
+    </tr>
+    {%for word, count in word_count%}
+    <tr>
+<td>{{word}} </td>
+<td>{{count}}</td>
+    </tr>
+    {%endfor%}
+</table>
