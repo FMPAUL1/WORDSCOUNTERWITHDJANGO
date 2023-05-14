@@ -30,19 +30,27 @@ table{
 
     }
 
+
 </style>
+
 <h1> THE WORDS AND COUNT OF IT </h1>
+
 <table >
     <tr>
         <th>Word</th>
         <th>count</th>
 
     </tr>
-    {%for word, count in word_count%}
+    
+    {%for word, count in word_count %}
     <tr>
 <td>{{word}} </td>
 <td>{{count}}</td>
-    </tr>
-    {%endfor%}
+</tr>
+
+{%endfor%}
+<td> {{counted}}</td>
+
+    
     <i> prepared by ATP :+2347080824483 </i>
 </table>
