@@ -16,6 +16,11 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
+
+
+
+
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
@@ -23,9 +28,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-ma9w6tjru%u%qo*yw6@yqo+i*u71fyf&wl-7_gn*ukgs1^w)qt'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -74,11 +79,20 @@ WSGI_APPLICATION = 'strcounter.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
+####my postgress database live
+import dj_database_url
+
+
+DATABASES={
+    'default':dj_database_url.parse('postgres://wordcounter_user:DvzTlue5MLhQLC8BdvGVSTJb13V9CkAJ@dpg-chtt4q7dvk4olitv5uog-a.ohio-postgres.render.com/wordcounter')
+    
 }
 
 
